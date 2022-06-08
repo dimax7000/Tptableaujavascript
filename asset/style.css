@@ -1,0 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header .headerContainer{
+    display: flex;
+    flex-direction: ;
+
+
+}
+.dateHeure{
+ display: flex;
+
+}
