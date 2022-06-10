@@ -11,31 +11,34 @@
 </head>
 <body>
     <header>
-       <div class="headerContainer">
-           <div class="dateHeure">
-               <div class="date">
-                08-juin 2022
-                 </div>
-               <div class="heure">
-                7:30
+      <div class="container">
+          <nav class="navabar">
+           <div class="date-heure">
+               <div id="date"></div>
+               <div id="heure">
+                   
                </div>
            </div>
            <div class="profil">
-               <span><i class="fa-solid fa-circle-user"></i></span>
-          
+            <i class="fa-solid fa-circle-user"></i>
            </div>
 
-
-       </div>
+          </nav>
+          </div>
+       
     </header>
     <main>
-<div class="container">
+        
+<div class="container2">
+
     <div class="sexe-recherche">
     <div class="search">
-        <input type="text" id="Recherche">
+        <div class="inputsearch"><input type="search" placeholder="Recherche" id="Recherche"></div>
+        <div class="boxsearch"><i class="fa-solid fa-arrow-right-long"></i></div>
+ 
     </div>
     <div class="sexe">
-        <select name="" id="Sexe">
+        <select class="sele" name="" id="Sexe">
             <option value="">sexe</option>
             <option value="Masculin">M</option>
             <option value="Feminin">F</option>
@@ -44,33 +47,88 @@
 </div>
 <div class="ajout-sup">
     <div class="ajout">
-        <button id="ajouter">
-        Ajouter
+        <button class="ajouter" id="ajouter">
+            <span class="bouton-icon"><i class="fa-thin fa-plus"></i></span>
+            <span class="add">Ajouter</span>
         </button>
 
     </div>
     <div class="sup">
-        <button id="supprimer">Supprimer</button>
+        <button class="supprimer" id="supprimer"><span class="delete">Supprimer</span></button>
+     
 
     </div>
+    </div>
 </div>
-<div class="table">
+<div class="centretable">
+    <table class="table-container">
    <thead>
-       <th>
-           <tr>#</tr>
-           <tr>Id</tr>
-           <tr>Nom</tr>
-           <tr>Prenom</tr>
-           <tr>Date de naissance</tr>
-           <tr>Adresse Email</tr>
-           <tr>Phone</tr>
-           <tr>Sexe</tr>
-           <tr>Action</tr>
-       </th>
+       <tr>
+           <th>#</th>
+           <th>Id</th>
+           <th>Nom</th>
+           <th>Prenom</th>
+           <th>Date de naissance</th>
+           <th>Adresse Email</th>
+           <th>Phone</th>
+           <th>Sexe</th>
+           <th>Action</th>
+       </tr>
    </thead>
+</table>
 </div>
 
 
+<div id="formulaire" class="inscription-form">
+    <div id="modal-content">
+        <div id="modal-header">
+             <span class="close-modal">&times;</span>
+             
+        </div>
+        <div id="modal-body">
+            <h2>Formulaire d'ajout</h2>
+            <form >
+                <div class="form-group">
+                    <label for="name">Entrer votre nom</label><input type="text" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="lastname">Entrer votre Prenom</label><input type="text" id="lastname">
+                </div>
+                <div class="form-group">
+                    <label for="naissance">Entrer votre date de naissance</label><input type="text" id="naissance">
+                </div>
+                <div class="form-group">
+                    <label for="adresse">Entrer votre adresse</label><input type="text" id="adrese">
+                </div>
+                <div class="form-group">
+                    <label for="mail">Entrer votre Email</label><input type="email" id="mail">
+                </div>
+                <div class="form-group">
+                    <label for="tel">Entrer votre numero de telephone</label><input type="tel" id="tel">
+                </div>
+                <div class="form-group">
+                    <label for="tel">Choisir votre sexe</label>
+                    <select name="" id="choix">
+                        <option value="">sexe</option>
+                        <option value="Masculin">M</option>
+                        <option value="Feminin">F</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea name="" id="comment" placeholder="Laisser votre commentaire"></textarea>
+                </div>
+                <div class="buton-group">
+                    <div class="annuler">
+                        <button id="reset">Annuler</button>
+                    </div>
+                    <div class="enregister">
+                        <button id="submit">Enregistrer</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
 
 
 </div>
@@ -79,5 +137,7 @@
     <footer>
 
     </footer>
+    <script src="asset/master.js"></script>
+    <script src="asset/fermeturemodal.js"></script>
 </body>
 </html>
