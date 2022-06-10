@@ -24,8 +24,9 @@ var affichageHeure = function(){
 
   heureDiv.textContent = heures + ":"  + minutes + ":" + secondes ;
 
-  dateDiv.textContent = jourNumero + jourNom + "" + mois +"" + annee;
+  dateDiv.textContent = jourNom + " " + jourNumero +  " "  + mois + " " + annee;
   setTimeout(affichageHeure,1000);
 
 
 }
+affichageHeure();

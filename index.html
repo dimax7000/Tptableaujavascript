@@ -14,7 +14,9 @@
       <div class="container">
           <nav class="navabar">
            <div class="date-heure">
-               <div id="date"></div>
+               <div id="date">
+
+               </div>
                <div id="heure">
                    
                </div>
@@ -85,9 +87,14 @@
              <span class="close-modal">&times;</span>
              
         </div>
+       
         <div id="modal-body">
             <h2>Formulaire d'ajout</h2>
             <form >
+                <div class="messageDerreur">
+               
+                </div>
+                <form method="" id="remplir" action="" onsubmit="return verification()">
                 <div class="form-group">
                     <label for="name">Entrer votre nom</label><input type="text" id="name">
                 </div>
@@ -98,7 +105,7 @@
                     <label for="naissance">Entrer votre date de naissance</label><input type="text" id="naissance">
                 </div>
                 <div class="form-group">
-                    <label for="adresse">Entrer votre adresse</label><input type="text" id="adrese">
+                    <label for="adresse">Entrer votre adresse</label><input type="text" id="adresse">
                 </div>
                 <div class="form-group">
                     <label for="mail">Entrer votre Email</label><input type="email" id="mail">
@@ -119,10 +126,10 @@
                 </div>
                 <div class="buton-group">
                     <div class="annuler">
-                        <button id="reset">Annuler</button>
+                        <button id="reset" class="reset" onclick="videLeschamps()">Annuler</button>
                     </div>
-                    <div class="enregister">
-                        <button id="submit">Enregistrer</button>
+                    <div class="enregister" >
+                        <button id="submit" class="submit" >Enregistrer</button>
                     </div>
                 </div>
             </form>
@@ -137,7 +144,8 @@
     <footer>
 
     </footer>
-    <script src="asset/master.js"></script>
-    <script src="asset/fermeturemodal.js"></script>
+    <script src="asset/js/master.js"></script>
+    <script src="asset/js/fermeturemodal.js"></script>
+    <script src="asset/js/recuperationForm.js"></script>
 </body>
 </html>

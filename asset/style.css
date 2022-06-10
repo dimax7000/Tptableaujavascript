@@ -118,6 +118,11 @@ header {
     height: 50px;
 
 }
+.buton-group{
+
+    float: right;
+}
+
 .sele{
   
     padding: 10px 25px;
@@ -187,6 +192,7 @@ header {
 }
 #modal-body{
     padding: 25px 30px;
+    overflow-y: auto;
 }
 #modal-body h2{
     color: #4586de;
@@ -215,7 +221,7 @@ header {
     font-size: 18px;
 
 }
-.form-group input, textarea{
+.form-group input, textarea,select{
     width: 100%;
     padding: 10px 20px;
     border: none;
@@ -223,16 +229,53 @@ header {
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
+textarea{
+    resize: none;
+}
 .buton-group{
     display: flex;
 }
 #reset,#submit{
     font-size: 20px;
     margin-bottom: 30px;
-    width: 25%;
+    width: 100%;
     transition: background 0.3s;
+    padding: 10px;
+    cursor: pointer;
+    
+
 
 }
+#submit{
+    margin-left: 10px;
+    background: #008168;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+#submit:hover{
+ background: #0a4136 ;
+}
+#reset{
+    background: #ce4e05 ;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+
+   }
+   #reset:hover{
+    background: #eb081a 
+   }
+   .messageDerreur{
+       text-align: center;
+       font-size: 20px;
+       background-color: #eb081a;
+       opacity: 0.2;
+       padding: 20px;
+      color: black;
+   }
+
 @keyframes modalSlideup {
     0%{
         transform: translateY(1500px);
