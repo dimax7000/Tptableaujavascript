@@ -1,84 +1,59 @@
-let nom = document.getElementById("name").value;
-let prenom = document.getElementById("lastname").value;
-let naissanceDate = document.getElementById("naissance").value;
-let address = document.getElementById("adresse").value;
-let mail = document.getElementById("mail").value;
-let tel = document.getElementById("tel").value;
-let sexe = document.getElementById("choix");
-let commentaire = document.getElementById("comment").value;
-let message = document.getElementById("messageDerreur");
+function verification() {
 
- //verification des champs au remplissage
-  function verification(){
+    var nom = document.getElementById("name");
+    var lastname = document.getElementById("lastname");
+    var naissance =document.getElementById("naissance");
+    var adresse = document.getElementById("adresse");
+    var mail = document.getElementById("mail");
+    var tel = document.getElementById("tel");
+    var sexe = document.getElementById("choix");
+    var commentaire = document.getElementById("comment");
+     
 
-    if(nom == "" ){
-        message.innerHTML = "Tous les champs sont obligatoires";
+    if(nom.value == ""){
+        document.getElementById("messageDerreur").innerHTML = "Veuillez saisie votre nom";
         return false;
-
-    }
-    if(prenom == "" ){
-        message.textContent = "<strong>Tous les champs sont obligatoires</strong>";
-        return false;
-
-    }
-    if(naissanceDate == "" ){
-        message.textContent = "<strong>Tous les champs sont obligatoires</strong>";
-        return false;
-
-    }
-    if(address == "" ){
-        message.textContent = "<strong>Tous les champs sont obligatoires</strong>";
-        return false;
-
-    }
-    if(mail == "" ){
-        message.textContent = "<strong>Tous les champs sont obligatoires</strong>";
-        return false;
-
-    }
-    if(sexe == "" ){
-        message.textContent = "<strong>Tous les champs sont obligatoires</strong>";
-        return false;
-
-    }
-    if(commentaire == "" ){
-        message.textContent = "<strong>Tous les champs sont obligatoires</strong>";
-        return false;
-
     }
 
-    
-    
-    
-    
-    
-    
-              
+    if(lastname.value == ""){
+        document.getElementById("messageDerreur").innerHTML = "Veuillez saisie votre prenom";
+        return false;
+    }
+    if(naissance.value == ""){
+        document.getElementById("messageDerreur").innerHTML = "Veuillez saisie votre date de naissance";
+        return false;
+    }
+    if(adresse.value == ""){
+        document.getElementById("messageDerreur").innerHTML = "Veuillez saisie votre votre";
+        return false;
+    }
+
+
+    if(mail.value == ""){
+        document.getElementById("messageDerreur").innerHTML = "Veuillez saisie votre email";
+        return false;
+    }
+    if(tel.value == ""){
+        document.getElementById("messageDerreur").innerHTML = "Veuillez saisie votre numero de telephone";
+        return false;
+    }
+    if(sexe.value == ""){
+
+        
+            document.getElementById("messageDerreur").innerHTML = "Veuillez saisie votre sexe";
+            return false;
+        
+    }
+    if(commentaire.value == ""){
+        document.getElementById("messageDerreur").innerHTML = "Veuillez saisie votre commentaire";
+        return false;
+    }
+
+
+
+
+  return true;
+ //Enregistrer les donnes dans dans notre Localstorag 
+
 }
-
- //vider les champs 
-  function videLeschamps(){
-      document.getElementById("remplir").reset();
-
-  }
-
-
- //Enregistrer les donnes dans dans notre Localstorage
-
-
-
-
-
-
-
-
-
-
-
-
- //Ajouter les donner au tableau
-
-
-
-
 

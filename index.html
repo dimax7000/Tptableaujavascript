@@ -91,10 +91,10 @@
         <div id="modal-body">
             <h2>Formulaire d'ajout</h2>
             <form >
-                <div class="messageDerreur">
+                <div id="messageDerreur">
                
                 </div>
-                <form method="" id="remplir" action="" onsubmit="return verification()">
+                <form method="" id="remplir" action="" >
                 <div class="form-group">
                     <label for="name">Entrer votre nom</label><input type="text" id="name">
                 </div>
@@ -126,10 +126,10 @@
                 </div>
                 <div class="buton-group">
                     <div class="annuler">
-                        <button id="reset" class="reset" onclick="videLeschamps()">Annuler</button>
+                        <button id="reset" class="reset" onclick="return videLeschamps()">Annuler</button>
                     </div>
                     <div class="enregister" >
-                        <button id="submit" class="submit" >Enregistrer</button>
+                        <button id="submit" class="submit" onclick="return verification()" >Enregistrer</button>
                     </div>
                 </div>
             </form>
@@ -147,5 +147,6 @@
     <script src="asset/js/master.js"></script>
     <script src="asset/js/fermeturemodal.js"></script>
     <script src="asset/js/recuperationForm.js"></script>
+    <script src="viderChamps.js"></script>
 </body>
 </html>
