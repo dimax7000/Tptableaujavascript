@@ -1,59 +1,53 @@
-function verification() {
-
-    var nom = document.getElementById("name");
-    var lastname = document.getElementById("lastname");
-    var naissance =document.getElementById("naissance");
-    var adresse = document.getElementById("adresse");
-    var mail = document.getElementById("mail");
-    var tel = document.getElementById("tel");
-    var sexe = document.getElementById("choix");
-    var commentaire = document.getElementById("comment");
-     
-
-    if(nom.value == ""){
-        document.getElementById("messageDerreur").innerHTML = "Veuillez saisie votre nom";
-        return false;
-    }
-
-    if(lastname.value == ""){
-        document.getElementById("messageDerreur").innerHTML = "Veuillez saisie votre prenom";
-        return false;
-    }
-    if(naissance.value == ""){
-        document.getElementById("messageDerreur").innerHTML = "Veuillez saisie votre date de naissance";
-        return false;
-    }
-    if(adresse.value == ""){
-        document.getElementById("messageDerreur").innerHTML = "Veuillez saisie votre votre";
-        return false;
+var selectedRow = null;
+function verification(e) {
+    e.preventDefault();
+    var RecupereTable = recupere();
+    if(selectedRow == null){
+        remplirTableaux(RecupereTable);
     }
 
 
-    if(mail.value == ""){
-        document.getElementById("messageDerreur").innerHTML = "Veuillez saisie votre email";
-        return false;
-    }
-    if(tel.value == ""){
-        document.getElementById("messageDerreur").innerHTML = "Veuillez saisie votre numero de telephone";
-        return false;
-    }
-    if(sexe.value == ""){
+   
 
-        
-            document.getElementById("messageDerreur").innerHTML = "Veuillez saisie votre sexe";
-            return false;
-        
-    }
-    if(commentaire.value == ""){
-        document.getElementById("messageDerreur").innerHTML = "Veuillez saisie votre commentaire";
-        return false;
-    }
-
-
-
-
-  return true;
- //Enregistrer les donnes dans dans notre Localstorag 
+}
+function recupere(){
+   var RecupereTable = {};
+   RecupereTable["nom"] = document.getElementById("name").value;
+   RecupereTable["lastname"] = document.getElementById("lastname").value;
+   RecupereTable["naissance"] = document.getElementById("naissance").value;
+   RecupereTable["adresse"] = document.getElementById("adresse").value;
+   RecupereTable["mail"] = document.getElementById("mail").value;
+   RecupereTable["tel"] = document.getElementById("tel").value;
+   RecupereTable["choix"] = document.getElementById("choix").value;
+   RecupereTable["comment"] = document.getElementById("comment").value;
+   
+   return RecupereTable;
 
 }
 
+function remplirTableaux(data){
+
+    var table = document.getElementById("remplir").getElementsByTagName("tbody")[0];
+    var newROW = table.insertRow(table.length);
+    var cel1 = newROW.insertcell(0);
+    cel1.innerHTML = `<input type="checkbox"/>`;
+    var cel2 = newROW.insertcell(1);
+    cel2.innerHTML = data.nom;
+    var cel3 = newROW.insertcell(2);
+    cel3.innerHTML = data.lastname;
+    var cel4 = newROW.insertcell(3);
+    cel4.innerHTML = data.naissance;
+    var cel5 = newROW.insertCell(4);
+    cel5.innerHTML = data.adresse;
+    var cel6 = newROW.insertcell(5);
+    cel6.innerHTML = data.mail;
+    var cel7 =newROW.insertcell(6);
+    cel7.innerHTML = data.tel;
+    var cel8 = newROW.insertCell(7);
+    cel8.innerHTML = choix;
+    var cel9 = newROW.insertCell(8);
+    cel9.innerText = `<a><i class="fa-solid fa-pencil"></i></a>   <a><i class="fa-solid fa-eye"></i></a>   <a><i class="fa-solid fa-xmark"></i></a>  <a><i class="fa-solid fa-comment"></i></a>`;
+  
+
+
+}

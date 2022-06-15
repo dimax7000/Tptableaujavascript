@@ -40,7 +40,7 @@
  
     </div>
     <div class="sexe">
-        <select class="sele" name="" id="Sexe">
+        <select class="sele" name="" id="choix">
             <option value="">sexe</option>
             <option value="Masculin">M</option>
             <option value="Feminin">F</option>
@@ -63,7 +63,7 @@
     </div>
 </div>
 <div class="centretable">
-    <table class="table-container">
+    <table id ="remplir" class="table-container">
    <thead>
        <tr>
            <th>#</th>
@@ -77,6 +77,10 @@
            <th>Action</th>
        </tr>
    </thead>
+   <tbody>
+
+
+   </tbody>
 </table>
 </div>
 
@@ -94,7 +98,7 @@
                 <div id="messageDerreur">
                
                 </div>
-                <form method="" id="remplir" action="" >
+                <form method="" id="remplir" action="" onsubmit="return verification()" >
                 <div class="form-group">
                     <label for="name">Entrer votre nom</label><input type="text" id="name">
                 </div>
@@ -114,7 +118,7 @@
                     <label for="tel">Entrer votre numero de telephone</label><input type="tel" id="tel">
                 </div>
                 <div class="form-group">
-                    <label for="tel">Choisir votre sexe</label>
+                    <label for="choix">Choisir votre sexe</label>
                     <select name="" id="choix">
                         <option value="">sexe</option>
                         <option value="Masculin">M</option>
@@ -129,7 +133,7 @@
                         <button id="reset" class="reset" onclick="return videLeschamps()">Annuler</button>
                     </div>
                     <div class="enregister" >
-                        <button id="submit" class="submit" onclick="return verification()" >Enregistrer</button>
+                        <button id="submit" class="submit" >Enregistrer</button>
                     </div>
                 </div>
             </form>
@@ -148,5 +152,6 @@
     <script src="asset/js/fermeturemodal.js"></script>
     <script src="asset/js/recuperationForm.js"></script>
     <script src="viderChamps.js"></script>
+    <script src="addUser.js"></script>
 </body>
 </html>
